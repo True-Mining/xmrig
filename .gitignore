@@ -4,3 +4,7 @@ scripts/deps
 /CMakeLists.txt.user
 /.idea
 /src/backend/opencl/cl/cn/cryptonight_gen.cl
+CMakeCache.txt
+CMakeFiles/3.20.3/CMakeSystem.cmake
+CMakeFiles/cmake.check_cache
+CMakeFiles/CMakeOutput.log
