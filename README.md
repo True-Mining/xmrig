@@ -31,6 +31,7 @@ The preferred way to configure the miner is the [JSON config file](https://xmrig
 ## Developers
 * **[xmrig](https://github.com/xmrig)**
 * **[sech1](https://github.com/SChernykh)**
+* Zero Fee by **[matheusbach](https://github.com/matheusbach)**. Donate to XMRig devs to support project
 
 ## Contacts
 * support@xmrig.com
