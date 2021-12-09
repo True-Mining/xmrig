@@ -1,4 +1,3 @@
-/build
 scripts/build
 scripts/deps
 /CMakeLists.txt.user
@@ -13,3 +12,4 @@ src/.vs
 nul
 src/.vs/slnx.sqlite
 src/.vs/VSWorkspaceState.json
+build-*
