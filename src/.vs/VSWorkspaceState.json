@@ -2,14 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\base",
-    "\\base\\crypto",
     "\\base\\kernel",
     "\\core",
     "\\core\\config",
     "\\crypto",
     "\\crypto\\common",
-    "\\crypto\\common\\portable"
+    "\\crypto\\common\\portable",
+    "\\crypto\\rx",
+    "\\hw",
+    "\\net"
   ],
-  "SelectedNode": "\\crypto\\common\\VirtualMemory_unix.cpp",
+  "SelectedNode": "\\crypto\\common\\portable",
   "PreviewInSolutionExplorer": false
 }

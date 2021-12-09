@@ -220,7 +220,7 @@ void xmrig::Summary::print(Controller *controller)
     print_cpu(config);
     print_memory(config);
     print_threads(config);
-    config->pools().print();
+   // config->pools().print();
 
     print_commands(config);
 }
