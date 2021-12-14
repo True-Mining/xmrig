@@ -2,7 +2,7 @@ read -p "First run? (install necessary packages) [y/n] " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-	pacman -S mingw-w64-x86_64-gcc git make cmake gcc
+	pacman -S mingw-w64-x86_64-gcc git make cmake gcc mingw-w64-x86_64-cmake
 fi
 
 rm -rf CMakeCache.txt
