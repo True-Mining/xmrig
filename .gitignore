@@ -13,3 +13,5 @@ nul
 src/.vs/slnx.sqlite
 src/.vs/VSWorkspaceState.json
 build-*
+.vs/*
+out/*
