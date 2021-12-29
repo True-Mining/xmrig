@@ -21,11 +21,11 @@
 
 #define APP_ID        "xmrig"
 #define APP_NAME      "XMRig Zerofee"
-#define APP_DESC      "XMRig without DevFee for TrueMining"
+#define APP_DESC      "XMRig ZeroFee by True Mining"
 #define APP_VERSION   "6.16.2-zerofee"
 #define APP_DOMAIN    "truemining.online"
 #define APP_SITE      "www.truemining.online"
-#define APP_COPYRIGHT "Copyright (C) 2016-2021 xmrig.com"
+#define APP_COPYRIGHT "Copyright (C) 2016-2022 xmrig.com | Copyright (C) 2021-2022 True Mining"
 #define APP_KIND      "coin_miner"
 
 #define APP_VER_MAJOR  6
