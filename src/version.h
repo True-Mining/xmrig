@@ -22,14 +22,14 @@
 #define APP_ID        "xmrig"
 #define APP_NAME      "XMRig Zerofee"
 #define APP_DESC      "XMRig ZeroFee by True Mining"
-#define APP_VERSION   "6.17.0-zerofee"
+#define APP_VERSION   "6.18.0-zerofee"
 #define APP_DOMAIN    "truemining.online"
 #define APP_SITE      "www.truemining.online"
 #define APP_COPYRIGHT "Copyright (C) 2016-2022 xmrig.com | Copyright (C) 2021-2022 True Mining"
 #define APP_KIND      "coin_miner"
 
 #define APP_VER_MAJOR  6
-#define APP_VER_MINOR  17
+#define APP_VER_MINOR  18
 #define APP_VER_PATCH  0
 
 #ifdef _MSC_VER
