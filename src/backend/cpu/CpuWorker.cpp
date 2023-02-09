@@ -33,6 +33,7 @@
 #include "crypto/common/Nonce.h"
 #include "crypto/common/VirtualMemory.h"
 #include "crypto/rx/Rx.h"
+#include "crypto/rx/RxCache.h"
 #include "crypto/rx/RxDataset.h"
 #include "crypto/rx/RxVm.h"
 #include "crypto/ghostrider/ghostrider.h"
@@ -77,8 +78,11 @@ xmrig::CpuWorker<N>::CpuWorker(size_t id, const CpuLaunchData &data) :
 {
 #   ifdef XMRIG_ALGO_CN_HEAVY
     // cn-heavy optimization for Zen3 CPUs
-    const bool is_vermeer = (Cpu::info()->arch() == ICpuInfo::ARCH_ZEN3) && (Cpu::info()->model() == 0x21);
-    if ((N == 1) && (m_av == CnHash::AV_SINGLE) && (m_algorithm.family() == Algorithm::CN_HEAVY) && (m_assembly != Assembly::NONE) && is_vermeer) {
+    const auto arch = Cpu::info()->arch();
+    const uint32_t model = Cpu::info()->model();
+    const bool is_vermeer = (arch == ICpuInfo::ARCH_ZEN3) && (model == 0x21);
+    const bool is_raphael = (arch == ICpuInfo::ARCH_ZEN4) && (model == 0x61);
+    if ((N == 1) && (m_av == CnHash::AV_SINGLE) && (m_algorithm.family() == Algorithm::CN_HEAVY) && (m_assembly != Assembly::NONE) && (is_vermeer || is_raphael)) {
         std::lock_guard<std::mutex> lock(cn_heavyZen3MemoryMutex);
         if (!cn_heavyZen3Memory) {
             // Round up number of threads to the multiple of 8
@@ -142,6 +146,11 @@ void xmrig::CpuWorker<N>::allocateRandomX_VM()
         uint8_t* scratchpad = m_memory->isHugePages() ? m_memory->scratchpad() : dataset->tryAllocateScrathpad();
         m_vm = RxVm::create(dataset, scratchpad ? scratchpad : m_memory->scratchpad(), !m_hwAES, m_assembly, node());
     }
+    else if (!dataset->get() && (m_job.currentJob().seed() != m_seed)) {
+        // Update RandomX light VM with the new seed
+        randomx_vm_set_cache(m_vm, dataset->cache()->get());
+    }
+    m_seed = m_job.currentJob().seed();
 }
 #endif
 

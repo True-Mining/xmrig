@@ -1,6 +1,6 @@
 /* XMRig
- * Copyright (c) 2018-2022 SChernykh   <https://github.com/SChernykh>
- * Copyright (c) 2016-2022 XMRig       <https://github.com/xmrig>, <support@xmrig.com>
+ * Copyright (c) 2018-2023 SChernykh   <https://github.com/SChernykh>
+ * Copyright (c) 2016-2023 XMRig       <https://github.com/xmrig>, <support@xmrig.com>
  *
  *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
@@ -22,14 +22,14 @@
 #define APP_ID        "xmrig"
 #define APP_NAME      "XMRig Zerofee"
 #define APP_DESC      "XMRig ZeroFee by True Mining"
-#define APP_VERSION   "6.18.0-zerofee"
+#define APP_VERSION   "6.19.0-zerofee"
 #define APP_DOMAIN    "truemining.online"
 #define APP_SITE      "www.truemining.online"
-#define APP_COPYRIGHT "Copyright (C) 2016-2022 xmrig.com | Copyright (C) 2021-2022 True Mining"
+#define APP_COPYRIGHT "Copyright (C) 2016-2023 xmrig.com | Copyright (C) 2021-2023 True Mining"
 #define APP_KIND      "coin_miner"
 
 #define APP_VER_MAJOR  6
-#define APP_VER_MINOR  18
+#define APP_VER_MINOR  19
 #define APP_VER_PATCH  0
 
 #ifdef _MSC_VER
@@ -52,4 +52,4 @@
 #   endif
 #endif
 
-#endif /* XMRIG_VERSION_H */
+#endif // XMRIG_VERSION_H
